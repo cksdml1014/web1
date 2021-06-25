@@ -4,40 +4,88 @@
 <head>
   <title> 두번째 사이트 </title>
   <meta charset="utf-8">
+  <style>
+    body{
+      margin: 0px;
+    }
+    h1{
+      text-align: center;
+      font-size: 45px;
+      border-bottom: 5px solid rgb(180, 230, 255);
+      padding: 20px;
+      margin: 0;
+    }
+    ol{
+      width: 220px;
+      margin: 0;
+      padding: 20px;
+      font-size: 20px;
+    }
+    ul{
+      font-size: 20px;
+    }
+    .left{
+      margin-left:20px;
+      border-right: 5px solid black;
+      font-size: 20px;
+    }
+    .right{
+      margin-left: 20px;
+    }
+    iframe{
+    }
+    a {
+      color: rgb(100, 100, 255);
+      text-decoration: none;
+    }
+    .가능 {
+      background-color: rgb(204, 255, 255);
+      color: blue; text-decoration: none
+    }
+    .불가 {
+      background-color: black;
+      color: red; text-decoration: none
+    }
+    .애매 {
+      background-color: yellow;
+      color: black; text-decoration: none
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+  </style>
 </head>
 
 <body>
   <h1><a href="index.html">경곽 33기를 소개합니다</a> </h1>
+  <div id="grid">
+    <div class="left">
+      <ol>
+        <li>하나</li>
+        <li>둘</li>
+        <li>셋</li>
+      </ol>야!
+    <br>
 
-  <ol>
-    <li>하나</li>
-    <li>둘</li>
-    <li>셋</li>
-  </ol>야!
-<br>
+      <p>
+        <iframe width="240" height="135" src="https://www.youtube.com/embed/pNW8RquAy9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+    </div>
+    <div class="right">
+      <h3>마음에 드는 과외 선생님을 선택하세요!</h3>
+      <h4>선생님을 선택하면 해당 선생님 프로필로 이동합니다.</h4>
 
-  <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/pNW8RquAy9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </p>
-
-  <h3>마음에 드는 과외 선생님을 선택하세요!</h3>
-  <h4>선생님을 선택하면 해당 선생님 프로필로 이동합니다.</h4>
-
-  <ul>
-  <li><a href="권대영과외.html", style="background-color: rgb(204, 255, 255);
-  color: blue; text-decoration: none">권대영</a></li>
-  <li><a href="김강욱과외.html", style="background-color: black;
-  color: red; text-decoration: none">김강욱</a></li>
-  <li><a href="박정훈과외.html", style="background-color: black;
-  color: red; text-decoration: none">박정훈</a></li>
-  <li><a href="송찬의과외.html", style="background-color: rgb(204, 255, 255);
-  color: blue; text-decoration: none">송찬의</a></li>
-  <li><a href="성하규과외.html", style="background-color: yellow;
-  color: black; text-decoration: none">성하규</a></li>
-  <li><a href="이세민과외.html", style="background-color: black;
-  color: red; text-decoration: none">이세민</a></li>
-  </ul>
-
+      <ul>
+      <li><a href="권대영과외.html", class="가능">권대영</a></li>
+      <li><a href="김강욱과외.html", class="불가">김강욱</a></li>
+      <li><a href="박정훈과외.html", class="불가">박정훈</a></li>
+      <li><a href="송찬의과외.html", class="가능">송찬의</a></li>
+      <li><a href="성하규과외.html", class="애매">성하규</a></li>
+      <li><a href="이세민과외.html", class="불가">이세민</a></li>
+      </ul>
+    </div>
+  </div>
 
 
 
