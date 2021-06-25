@@ -4,29 +4,64 @@
   <title>Police officer Park</title>
   <meta charset="utf-8">
   <style>
+  h1{
+    margin:0;
+    padding: 20px;
+  }
   h2{
     background-color: black;
     color: red;
+    display: inline;
+    padding: 0px;
+    margin: 20px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  ul{
+    font-size: 20px;
+  }
+  #grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  .left{
+    margin-left:20px;
+    border-right: 5px solid black;
+    font-size: 20px;
+    text-align:center;
+    padding-right: 20px;
+  }
+  .right{
+    margin-left: 20px;
   }
   </style>
 
 </head>
 
 <body>
-  <h1> 박정훈 </h1>
-  <h2> 과외 불가 </h2>
-  <h3>선생님 정보</h3>
-  <ul>
-    <li>생년월일: 1999년 10월 16일 </li>
-    <li>오른손잡이</li>
-    <li>학력: 서울대학교 기계항공공학부</li>
-    <li>병역: 공익근무요원 복무중(하남경찰서)</li>
-    <li>거주지: 경기도 하남시</li>
-    <li>진행중 과외: 없음</li>
-    <li>과외가능과목: 수학, 물리, SolidWorks, Python, TOEIC</li>
-    <li>선생님의 한마디: ㅗ</li>
-  </ul>
-  <img src="박정훈.jpg" width=80%>
+  <div id="grid">
+    <div class="left">
+      <h1> 박정훈 </h1>
+      <h2> 과외 불가 </h2>
+      <br>
+      <br>
+      <img src="박정훈.jpg" width=100%>
+    </div>
+    <div class="right">
+      <h3>선생님 정보</h3>
+      <ul>
+        <li>생년월일: 1999년 10월 16일 </li>
+        <li>오른손잡이</li>
+        <li>학력: 서울대학교 기계항공공학부</li>
+        <li>병역: 공익근무요원 복무중(하남경찰서)</li>
+        <li>거주지: 경기도 하남시</li>
+        <li>진행중 과외: 없음</li>
+        <li>과외가능과목: 수학, 물리, SolidWorks, Python, TOEIC</li>
+        <li>선생님의 한마디: ㅗ</li>
+      </ul>
+    </div>
+  <div>
   <br>
   <a href="2.html"> Back </a>
   <br>

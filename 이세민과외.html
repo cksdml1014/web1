@@ -4,29 +4,65 @@
   <title>Corporal Lee</title>
   <meta charset="utf-8">
   <style>
+  h1{
+    margin:0;
+    padding: 20px;
+  }
   h2{
     background-color: black;
     color: red;
+    display: inline;
+    padding: 0px;
+    margin: 20px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  ul{
+    font-size: 20px;
+  }
+  #grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  .left{
+    margin-left:20px;
+    border-right: 5px solid black;
+    font-size: 20px;
+    text-align:center;
+    padding-right: 20px;
+  }
+  .right{
+    margin-left: 20px;
   }
   </style>
 
 </head>
 
 <body>
-  <h1> 이세민 </h1>
-  <h2> 과외 불가 </h2>
-  <h3>선생님 정보</h3>
-  <ul>
-    <li>생년월일: 1999년 7월 19일 </li>
-    <li>오른손잡이</li>
-    <li>학력: 서울대학교 건설환경공학부 재학, 서울대학교 치과대학 진학예정</li>
-    <li>병역: 육군 상병 복무중(국군 1철도대 강릉TMO)</li>
-    <li>거주지: 경기도 고양시</li>
-    <li>진행중 과외: 없음</li>
-    <li>과외가능과목: 수학, 물리, 일반화학, 유기화학, 일반생물학, 티켓발권, 친절한 전화응대</li>
-    <li>선생님의 한마디: 감삼다 강릉팀오 상ㅂ이셈다 머스타들일까요?</li>
-  </ul>
-  <img src="이세민.jpg" width=70%>
+  <div id="grid">
+    <div class="left">
+      <h1> 이세민 </h1>
+      <h2> 과외 불가 </h2>
+      <br>
+      <br>
+      <img src="이세민.jpg" width=100%>
+    </div>
+    <div class="right">
+      <h3>선생님 정보</h3>
+      <ul>
+        <li>생년월일: 1999년 7월 19일 </li>
+        <li>오른손잡이</li>
+        <li>학력: 서울대학교 건설환경공학부 재학, 서울대학교 치과대학 진학예정</li>
+        <li>병역: 육군 상병 복무중(국군 1철도대 강릉TMO)</li>
+        <li>거주지: 경기도 고양시</li>
+        <li>진행중 과외: 없음</li>
+        <li>과외가능과목: 수학, 물리, 일반화학, 유기화학, 일반생물학, 티켓발권, 친절한 전화응대</li>
+        <li>선생님의 한마디: 감삼다 강릉팀오 상ㅂ이셈다 머스타들일까요?</li>
+      </ul>
+    </div>
+  </div>
+
   <br>
   <a href="2.html"> Back </a>
   <br>

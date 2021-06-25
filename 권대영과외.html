@@ -4,29 +4,63 @@
   <title>Teacher Kwon</title>
   <meta charset="utf-8">
   <style>
+  h1{
+    margin:0;
+    padding: 20px;
+  }
   h2{
     background-color: rgb(204, 255, 255);
     color: blue;
+    display: inline;
+    padding: 0px;
+    margin: 20px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  ul{
+    font-size: 20px;
+  }
+  #grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+  }
+  .left{
+    margin-left:20px;
+    border-right: 5px solid black;
+    font-size: 20px;
+    text-align:center;
+  }
+  .right{
+    margin-left: 20px;
   }
   </style>
 
 </head>
 
 <body>
-  <h1> 권대영 </h1>
-  <h2> 과외 가능 </h2>
-  <h3>선생님 정보</h3>
-  <ul>
-    <li>생년월일: 1999년 3월 9일 </li>
-    <li>왼손잡이</li>
-    <li>학력: 서울대학교 통계학부 재학</li>
-    <li>병역: 군필(육군 병장 만기전역)</li>
-    <li>거주지: 경기도 안양시</li>
-    <li>진행중 과외: 광주과고 고2, 공부안하는 안양시 급식1</li>
-    <li>과외가능과목: 수학, 통계, 물리?, 카투사산 실전영어</li>
-    <li>선생님의 한마디: 에이션 드럼 야 위힛더 북 야</li>
-  </ul>
-  <img src="권대영.jpg" width=30%>
+  <div id="grid">
+    <div class="left">
+      <h1> 권대영 </h1>
+      <h2> 과외 가능 </h2>
+      <br>
+      <br>
+      <img src="권대영.jpg" width=90%>
+    </div>
+    <div class="right">
+      <h3>선생님 정보</h3>
+      <ul>
+        <li>생년월일: 1999년 3월 9일 </li>
+        <li>왼손잡이</li>
+        <li>학력: 서울대학교 통계학부 재학</li>
+        <li>병역: 군필(육군 병장 만기전역)</li>
+        <li>거주지: 경기도 안양시</li>
+        <li>진행중 과외: 전북과고 고2, 공부안하는 과천시 급식1</li>
+        <li>과외가능과목: 수학, 통계, 물리?, 카투사산 실전영어</li>
+        <li>선생님의 한마디: 에이션 드럼 야 위힛더 북 야</li>
+      </ul>
+    </div>
+  </div>
   <br>
   <a href="2.html"> Back </a>
   <br>
