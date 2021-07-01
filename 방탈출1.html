@@ -19,6 +19,30 @@
       <h3> Soul of Seoul, FC Seoul </h3>
       <h4> 1+1=? ?에 들어갈 값은? </h4>
     </div>
-    <input type="button" value="Check!" onclick"location.href='방탈출1.html'">
+    <script>
+      function enterkey() {
+        if (window.event.keyCode ===13){
+          getInputValue();
+        }
+      }
+    </script>
+    <input type="text" placeholder="정답을 입력해주세요." id="myInput" onkeyup="enterkey()">
+    <button type="button" onclick="getInputValue();">확인</button>
+
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("myInput").value;
+            var answer='2';
+
+            // Displaying the value
+            if (inputVal === answer ){
+              location.href="방탈출2.html";
+            }
+            else {
+              alert("틀렸습니다!");
+            }
+        }
+    </script>
   </body>
 </html>
