@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>송파스</title>
+    <style>
+      body{
+        background-color: white;
+      }
+      #wrap{
+        width:1536px; /*bootstrap : container (전체 화면 , width :960px)*/
+        height:1152px;
+        margin:0px auto; /*가운데 정렬*/
+        font-size:20px;
+        text-align: center;
+      }
+      #header{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        color: red;
+        font-size: 30px;
+        line-height: 128px;/*글자나 이미지 위치 정렬*/
+        font-family: Georgia;
+      }
+      #middle{
+        width:1536px;
+        height:896px;
+        background-color:gray;
+        line-height: 1024px;/*글자나 이미지 위치 정렬*/
+        display:flex;
+      }
+      #leftside{
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;/*글자나 이미지 위치 정렬*/
+        flex: 3;
+      }
+      #section{
+        width:1024px;
+        height:768px;
+        background-image: url("https://t1.daumcdn.net/cfile/tistory/1568A31E4C879AAF7D?original");
+        background-color: red;
+        line-height: 768px;
+        border-top: 64px solid;
+        border-bottom: 64px solid;
+        border-left: 64px solid;
+        border-right: 64px solid;
+        border-color: rgb(32, 32, 32);
+        flex:16;
+        font-family: Georgia, 궁서;
+      }
+      #password{
+        position: relative;
+        top : 150px;
+        left: 30px;
+        font-family: Georgia, 궁서;
+      }
+      #hint{
+        position: absolute;
+        left: 872px;
+        top: 500px;
+        font-family: 궁서;
+      }
+      #rightside {
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;
+        flex:3;
+      }
+      #footer{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        line-height: 192px;/*글자나 이미지 위치 정렬*/
+        color:white;
+        float: left;
+        font-family: Georgia, 궁서;
+      }
+      #myInput {
+        width: 300px;
+        height: 50px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid black;
+        font-size: 20px;
+        background-color: white;
+        opacity: 0.5;
+        font-family: Georgia, 궁서;
+      }
+      #password2 {
+        width: 100px;
+        height: 55px;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+        font-family: Georgia, 궁서;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function enterkey() {
+        if (window.event.keyCode ===13){
+          getInputValue();
+        }
+      }
+    </script>
+
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("myInput").value;
+            var answer='dnjswns0416!@';
+
+            // Displaying the value
+            if (inputVal === answer ){
+              location.href="chapter1-2-2.html";
+            }
+            else {
+              alert("틀렸습니다!");
+            }
+        }
+    </script>
+      <div id="wrap">
+        <div id="header">Chapter 1</div>
+        <div id="middle">
+          <div id="leftside"></div>
+            <div id="section">
+              <div id="password">
+                <input type="text" placeholder="암호를 입력하시오." id="myInput" onkeyup="enterkey()">
+                <button id="password2" type="button" onclick="getInputValue();">확인</button>
+              </div>
+              <div id="hint">
+                <button type="button" onclick="alert('이름+생일!@')">암호를 잊어버리셨나요?</button>
+              </div>
+          </div>
+          <div id="rightside"></div>
+        </div>
+        <div id="footer">Produced by 김기범, 박하늘, 송찬의, 정우석</div>
+      </div>
+  </body>
+</html>
