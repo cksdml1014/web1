@@ -40,7 +40,7 @@
       #section{
         width:1024px;
         height:768px;
-        background-image: url("https://t1.daumcdn.net/cfile/tistory/1868A31E4C879AB380");
+        background-image: url("https://t1.daumcdn.net/cfile/tistory/2068A31E4C879AAC7B");
         background-color: black;
         line-height: 768px;
         border-top: 64px solid;
@@ -67,63 +67,43 @@
         float: left;
         font-family: Georgia, 궁서;
       }
-      #start{
+      #off2{
         position: relative;
-        top : 375px;
-        left: -375px;
+        top : -13px;
+        left: -10px;
         font-size: 18px;
         color: red;
         opacity: 0;
-        border: none;
-        font-family: Georgia, 궁서;
-      }
-      #comp{
-        position: relative;
-        top: -340px;
-        left: -460px;
-        font-size: 18px;
-        color: red;
-        padding: 25px 30px;
-        opacity: 0;
-        font-family: Georgia, 궁서;
-      }
-      #office{
-        position: relative;
-        top : 360px;
-        left: -470px;
-        font-size: 18px;
-        color: red;
-        opacity: 0;
-        padding: 12px 15px;
+        padding: 8px 16px;
         font-family: Georgia, 궁서;
       }
       #exit1{
         position: relative;
-        top: 260px;
-        left: 1230px;
+        top: 75px;
+        left: 29px;
         font-size: 18px;
         color: red;
-        padding: 0px 12px;
+        padding: 0px 27px;
         opacity: 0;
         font-family: Georgia, 궁서;
       }
-      #exit2{
-        position: absolute;
-        top: 465px;
-        left: 1430px;
-        font-size: 18px;
-        color: red;
-        padding: 0px 12px;
-        opacity: 0;
-        font-family: Georgia, 궁서;
-      }
-      #internet{
+      #restart{
         position: relative;
-        top: 360px;
-        left: -440px;
+        top: -13px;
+        left: 33px;
         font-size: 18px;
         color: red;
-        padding: 12px 15px;
+        padding: 8px 16px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #resign{
+        position: relative;
+        top: -13px;
+        left: 78px;
+        font-size: 18px;
+        color: red;
+        padding: 8px 16px;
         opacity: 0;
         font-family: Georgia, 궁서;
       }
@@ -148,10 +128,10 @@
         <div id="middle">
           <div id="leftside"></div>
             <div id="section">
-              <button type="button" id="start" onclick="getInputValue();"><img src="시작로고.png"></button>
-              <button type="button" id="comp" onclick=location.href="chapter1-2-comp.html";>컴</button>
-              <button type="button" id="office" onclick=location.href="chapter1-2-office.html";>오</button>
-              <button type="button" id="internet" onclick=location.href="chapter1-2-internet.html";>.</button>
+              <button type="button" id="off2" onclick=location.href="chapter1-2-off2.html";>.</button>
+              <button type="button" id="restart" onclick=location.href="chapter1-2-1.html";>.</button>
+              <button type="button" id="resign" onclick="alert('3급이상 관리직의 승인이 필요합니다.')">.</button>
+              <button type="button" id="exit1" onclick=location.href="chapter1-2-2.html";>.</button>
           </div>
           <div id="rightside"></div>
         </div>

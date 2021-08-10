@@ -5,7 +5,7 @@
     <title>송파스</title>
     <style>
       body{
-        background-color: white;
+        background-color: black;
       }
       #wrap{
         width:1536px; /*bootstrap : container (전체 화면 , width :960px)*/
@@ -41,7 +41,7 @@
         width:1024px;
         height:768px;
         background-image: url("https://t1.daumcdn.net/cfile/tistory/2068A31E4C879AB481");
-        background-color: red;
+        background-color: black;
         line-height: 768px;
         border-top: 64px solid;
         border-bottom: 64px solid;
@@ -51,10 +51,10 @@
         flex:16;
         font-family: Georgia, 궁서;
       }
-      #start{
+      #secret{
         position: relative;
         top : 222px;
-        right: 298px;
+        left: 146px;
         padding: 3px 6px;
         font-size: 12px;
         background-color: black;
@@ -75,6 +75,116 @@
         line-height: 192px;/*글자나 이미지 위치 정렬*/
         color:white;
         float: left;
+        font-family: Georgia, 궁서;
+      }
+      #start{
+        position: relative;
+        top : 375px;
+        left: -85px;
+        font-size: 18px;
+        color: red;
+        opacity: 0;
+        border: none;
+        font-family: Georgia, 궁서;
+      }
+      #comp{
+        position: relative;
+        bottom: 340px;
+        left: -170px;
+        font-size: 18px;
+        color: red;
+        padding: 25px 30px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #office{
+        position: relative;
+        top : 360px;
+        left: -180px;
+        font-size: 18px;
+        color: red;
+        opacity: 0;
+        padding: 12px 15px;
+        font-family: Georgia, 궁서;
+      }
+      #exit1{
+        position: absolute;
+        top: 260px;
+        left: 1230px;
+        font-size: 18px;
+        color: red;
+        padding: 0px 12px;
+        opacity: 100;
+        font-family: Georgia, 궁서;
+      }
+      #exit2{
+        position: absolute;
+        top: 465px;
+        left: 1430px;
+        font-size: 18px;
+        color: red;
+        padding: 0px 12px;
+        opacity: 100;
+        font-family: Georgia, 궁서;
+      }
+      #internet{
+        position: relative;
+        top: 360px;
+        left: -150px;
+        font-size: 18px;
+        color: red;
+        padding: 12px 15px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #jojaktak{
+        position: relative;
+        top: 131px;
+        left: -362px;
+        font-size: 18px;
+        color: red;
+        padding: 5px 95px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #internet2{
+        position: relative;
+        top: -12px;
+        left: -566px;
+        font-size: 18px;
+        color: red;
+        padding: 5px 95px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #internet3{
+        position: relative;
+        top: 195px;
+        left: -770px;
+        font-size: 18px;
+        color: red;
+        padding: 5px 95px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #game{
+        position: relative;
+        top: -605px;
+        left: -346px;
+        font-size: 18px;
+        color: red;
+        padding: 5px 95px;
+        opacity: 0;
+        font-family: Georgia, 궁서;
+      }
+      #off{
+        position: relative;
+        top: -455px;
+        left: -430px;
+        font-size: 18px;
+        color: red;
+        padding: 8px 60px;
+        opacity: 0;
         font-family: Georgia, 궁서;
       }
     </style>
@@ -98,7 +208,16 @@
         <div id="middle">
           <div id="leftside"></div>
             <div id="section">
-              <button type="button" id="start" onclick="getInputValue();">S</button>
+              <button type="button" id="secret" onclick="getInputValue();">S</button>
+              <button type="button" id="start" onclick=location.href="chapter1-2-3.html";><img src="시작로고.png"></button>
+              <button type="button" id="comp" onclick=location.href="chapter1-2-comp.html";>컴</button>
+              <button type="button" id="office" onclick=location.href="chapter1-2-office.html";>오</button>
+              <button type="button" id="internet" onclick=location.href="chapter1-2-internet.html";>.</button>
+              <button type="button" id="jojaktak" onclick=location.href="chapter1-2-jojaktak.html";>.</button>
+              <button type="button" id="internet2" onclick=location.href="chapter1-2-internet.html";>.</button>
+              <button type="button" id="internet3" onclick=location.href="chapter1-2-internet.html";>.</button>
+              <button type="button" id="game" onclick=location.href="chapter1-2-game.html";>.</button>
+              <button type="button" id="off" onclick=location.href="chapter1-2-off.html";>.</button>
           </div>
           <div id="rightside"></div>
         </div>
