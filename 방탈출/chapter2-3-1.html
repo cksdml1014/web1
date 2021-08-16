@@ -302,6 +302,15 @@
     function startClick() {
         var x = document.getElementsByClassName("boundary");
 
+        document.onmousedown=disableclick;
+        status="Right click is not available.";
+        function disableclick(event){
+           if (event.button==2) {
+             location.href="chapter2-3-failure.html";
+           }
+         }
+
+
         $("maze").onmouseleave = noCheat;
         var boundaries = $$("div#maze div.boundary");
         for (var i = 0; i < boundaries.length; i++) {
