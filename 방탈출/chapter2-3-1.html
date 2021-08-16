@@ -310,6 +310,17 @@
            }
          }
 
+         time=10;
+
+         var x = setInterval(function(){
+           document.getElementById("status").innerHTML=time+"초";
+           time--;
+           if(time<0){
+             clearInterval(x);
+             location.href="chapter2-3-failure.html";
+           }
+         }, 1000);
+
 
         $("maze").onmouseleave = noCheat;
         var boundaries = $$("div#maze div.boundary");
