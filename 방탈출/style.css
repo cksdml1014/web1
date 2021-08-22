@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {margin:0; padding:0; box-sizing: border-box;}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+header{
+  color: red;
+  font-size: 30px;
+  line-height: 128px;
+  font-weight: bold;
+}
+
+footer{
+  line-height: 128px;
+  float: left;
+  color: white;
+  font-size: 15px;
+  position: relative;
+  top: 145px; 
+}
+
+div#main{
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 64px rgb(32,32,32);
+  width: 1024px; height: 750px;
+}
+
+h2{
+  font-size: 0px;
+}
+
+div.top {
+  width: 100%; height : 30px;
+  font-size: 20px; font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  top: 45px;
+}
+
+div.nav{
+  position: relative;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; height: 30px;
+  top: 58px;
+  padding-top: 15px;
+  z-index: 1;
+}
+
+div.search {
+  background-color: white;
+  width: 100%; height: 10px;
+  float: right;
+}
+
+#SearchWindow{
+  position: absolute;
+  width: 200px; height: 28px;
+  border: 2px solid black;
+  border-radius: 2px;
+  right: 5px; top: -30px;
+}
+
+div.RecordWindow{
+  background-color: white;
+  position: absolute;
+  width: 200px; height: auto;
+  border: 1px solid gray;
+  right: 5px; top: 0px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+div.record{
+  width: 100%;
+  margin: 3px;
+}
+
+div.games {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  background-color: black;
+}
+
+div.game {
+  width: 224px; height: 30px;
+  background-color: #ddd;
+  text-align: center;
+  border-right: 2px solid #777;
+}
+div.game:last-child{
+  border: none;
+}
+
+div.this {
+  background-color: white;
+}
+
+div#GameWindow{
+  width: 100%; height: 635px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+  top: 81px;
+}
+
+#play{
+	position: absolute;
+	margin-top: 80px;
+	padding: 15px 25px;
+	color: rgba(10,7,67,1.00);
+	font-family: '궁서';
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	background-color: rgb(246, 184, 30);
+	border: 2px solid rgba(239,0,0,1.00);
+	z-index: 100;
+	cursor: pointer;
+  top: 150px;
+}
+
+.grid{
+	display: flex;
+	flex-wrap: wrap;
+	width: 527px;
+	height: 527px;
+  position: relative;
+  top: 0px;
+}
+
+.grid div{
+	width : 17px;
+	height: 17px;
+}
+
+.pac-dot {
+	background-color: rgba(247,191,80,1.00);
+	border: 7px solid rgba(10,7,67,1.00);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.wall{
+	background-color: darkblue;
+}
+
+/* FRUITS ICON MADE BY SMASHICONS FOR FLATICONS*/
+.power-pellet{
+	content: url(cherry4.png);
+	background-color: transparent;
+}
+
+
+/* GHOST ICONS MADE BY SMASHICONS FOR FLATICONS*/
+.blinky{
+	content: url(ghost.png);
+	filter: contrast(150%);
+	border:0;
+	border-radius: 0 !important;
+	transform: rotate(0deg) !important;
+	background-color: transparent !important;
+}
+
+.pinky{
+		content: url(ghost.png);
+	filter: hue-rotate(-40deg) brightness(200%);
+	border:0;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	transform: rotate(0deg) !important;
+}
+
+.inky{
+	content: url(ghost.png);
+	filter: hue-rotate(-190deg) brightness(180%);
+	border:0;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	transform: rotate(0deg) !important;
+}
+
+.clyde{
+	content: url(ghost.png);
+	filter: hue-rotate(35deg) brightness(170%);
+	border:0;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	transform: rotate(0deg) !important;
+}
+
+.scared-ghost{
+	content: url(whiteGhost.png);
+	border:0;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.pac-man{
+	background-color: yellow;
+	border-radius: 8px;
+	border: none;
+	transform: rotate(115deg);
+}
+
+.pac-man::before, .pac-man::after{
+	position: absolute;
+	content:"";
+	display: block;
+	width: 8px;
+	height: 8px;
+}
+.pac-man::before{
+	border-radius : 50px 0 0 0;
+	background-color: rgba(10,7,67,1.00);
+	border-color: rgba(10,7,67,1.00);
+}
+.pac-man::after{
+	border-radius : 50px 0 0 0 ;
+	background-color: yellow;
+	transform-origin: bottom right;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	-webkit-animation: eat .5s infinite;
+	animation: eat .5s infinite;
+	background-image: url(data:image/svg+xml;bas64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjkuMTA3IDI5LjEwNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjkuMTA3IDI5LjEwNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGcgaWQ9ImMxNDdfZnVsbF9tb29uIj4NCgkJPGc+DQoJCQk8cGF0aCBkPSJNMTQuNTU0LDBDNi41NjEsMCwwLDYuNTYyLDAsMTQuNTUyYzAsNy45OTYsNi41NjEsMTQuNTU1LDE0LjU1NCwxNC41NTVjNy45OTYsMCwxNC41NTMtNi41NTksMTQuNTUzLTE0LjU1NQ0KCQkJCUMyOS4xMDYsNi41NjIsMjIuNTUsMCwxNC41NTQsMHoiLz4NCgkJPC9nPg0KCTwvZz4NCgk8ZyBpZD0iQ2FwYV8xXzE0XyI+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+	background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+@-webkit-keyframes eat{
+	0% {
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+	25% {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	50% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	75% {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	100% {
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+}
+@keyframes eat{
+	0%{
+		transform: rotate(-90deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-90deg);
+	}
+}
+.gameOver, .won{
+	position: absolute;
+	margin-top: 80px ;
+	width: 500px;
+	height: 100px;
+	border : 2px solid rgba(239,0,0,1.00);
+	text-shadow: 1px 1px 0 rgba(239,0,0,1.00);
+	background-color: rgb(246, 184, 30);
+	color: rgba(10,7,67,1.00);
+	font-size: 40px;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+  line-height: 90px;
+}
+
+.gameOver::after{
+	content: "잠행이 발각되었습니다!";
+	position: absolute;
+	font-family: '궁서', cursive;
+}
+
+.won::after{
+	content: "잠행에 성공하였습니다!";
+	position: absolute;
+	font-family: '궁서', cursive;
+}
+
+.restart{
+	position: absolute;
+	width : 200px;
+	height: 40px;
+	margin-top: 100px;
+	background-color: rgba(10,7,67,1.00);
+	border: 2px solid rgba(239,0,0,1.00);
+	border-radius: 5px;
+	z-index: 200;
+	cursor : pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: '궁서', cursive;
+	font-size: 22px;
+	letter-spacing: 1.5px;
+	color: rgb(246, 184, 30);
+	text-shadow: 1px 1px 0 rgba(239,0,0,1.00);
+  top: 450px;
+}
+
+.restart:hover{
+	transform: scale(1.1);
+}
+
+.restart::after{
+	content: "다시 시작하기";
+	position : absolute;
+}

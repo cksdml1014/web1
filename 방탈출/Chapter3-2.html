@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchToEscape</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="gamestyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ca42bbbf84.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <header> Chapter 3 </header>
+    <div id="main">
+      <div class="top"> 플래시 게임 </div>
+
+      <div class="nav">
+        <div class="search">
+          <input id="SearchWindow" type="text" name="search" placeholder="검색" autocomplete="off" onKeypress="javascript:if(event.keyCode==13) {search_onclick_submit()}"/>
+          <div class="RecordWindow">
+            <div class="record">대장 토끼</div>
+            <div class="record">기생충 전등</div>
+            <div class="record">하순모주</div>
+          </div>
+        </div>
+        <div class="games">
+          <div class="game">위장</div>
+          <div class="this game">잠행</div>
+          <div class="game">도주</div>
+          <div class="game">탈출</div>
+        </div>
+      </div>
+      <div id="GameWindow">
+        <button id="play"  onClick="document.getElementById('play').style.display = 'none';"">잠행을 시작합니다</button>
+        <script src="app.js" charset="utf-8"></script>
+        <div class="grid"></div>
+        <h2>Score : <span id="score">0</span></h2>
+        <h2 id="h2bestScore" style="display: none">Your best score : <span id="bestScore">0</span></h2>
+    </div>
+    <footer> Produced by  김기범, 박하늘, 송찬의, 정우석</footer>
+
+    <script src = "script.js"></script>
+  </body>
+</html>
