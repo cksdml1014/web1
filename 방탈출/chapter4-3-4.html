@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>송파스</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      #wrap{
+        width:1536px; /*bootstrap : container (전체 화면 , width :960px)*/
+        height:1152px;
+        margin:0px auto; /*가운데 정렬*/
+        font-size:20px;
+        text-align: center;
+      }
+      #header{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        color: red;
+        font-size: 30px;
+        line-height: 128px;/*글자나 이미지 위치 정렬*/
+        font-family: Georgia;
+      }
+      #middle{
+        width:1536px;
+        height:896px;
+        background-color:gray;
+        line-height: 1024px;/*글자나 이미지 위치 정렬*/
+        display:flex;
+      }
+      #leftside{
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;/*글자나 이미지 위치 정렬*/
+        flex: 3;
+      }
+      #section{
+        width:1024px;
+        height:768px;
+        background-color: black;
+        line-height: 768px;
+        border-top: 64px solid;
+        border-bottom: 64px solid;
+        border-left: 64px solid;
+        border-right: 64px solid;
+        border-color: rgb(32, 32, 32);
+        flex:16;
+        font-family: Georgia, 궁서;
+      }
+      #rightside {
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;
+        flex:3;
+      }
+      #footer{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        line-height: 192px;/*글자나 이미지 위치 정렬*/
+        color:white;
+        float: left;
+        font-family: Georgia, 궁서;
+      }
+      #start {
+        background-color: transparent;
+        border-color: transparent;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 220px;
+        left: 300px;
+        cursor: pointer;
+      }
+      .button {
+        border-radius: 12px;
+        background-color: #4CAF50;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 160px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        font-family: 맑은고딕;
+        position: relative;
+        bottom: 500px;
+        left: 400px;
+      }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      h2{
+        color: white;
+        font-family: 나눔고딕;
+      }
+    </style>
+  </head>
+  <body>
+      <div id="wrap">
+        <div id="header">Chapter 4</div>
+        <div id="middle">
+          <div id="leftside"></div>
+            <div id="section">
+              <h2>축하합니다! 부동산을 10억원에 매각하였습니다!</h2>
+              <button class="button" onclick=location.href="chapter4-4.html";><span>다음</span></button>
+          </div>
+          <div id="rightside"></div>
+        </div>
+        <div id="footer">Produced by 김기범, 박하늘, 송찬의, 정우석</div>
+      </div>
+  </body>
+</html>
