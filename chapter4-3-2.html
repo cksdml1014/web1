@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>송파스</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      #wrap{
+        width:1536px; /*bootstrap : container (전체 화면 , width :960px)*/
+        height:1152px;
+        margin:0px auto; /*가운데 정렬*/
+        font-size:20px;
+        text-align: center;
+      }
+      #header{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        color: red;
+        font-size: 30px;
+        line-height: 128px;/*글자나 이미지 위치 정렬*/
+        font-family: Georgia;
+      }
+      #middle{
+        width:1536px;
+        height:896px;
+        background-color:gray;
+        line-height: 1024px;/*글자나 이미지 위치 정렬*/
+        display:flex;
+      }
+      #leftside{
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;/*글자나 이미지 위치 정렬*/
+        flex: 3;
+      }
+      #section{
+        width:1024px;
+        height:768px;
+        background-image: url("오피스.jpg");
+        background-color: black;
+        line-height: 768px;
+        border-top: 64px solid;
+        border-bottom: 64px solid;
+        border-left: 64px solid;
+        border-right: 64px solid;
+        border-color: rgb(32, 32, 32);
+        flex:16;
+        font-family: Georgia, 궁서;
+        margin:auto;
+      }
+      #first{
+        width: 100%;
+        height: 100px;
+        color: white;
+        position: relative;
+        bottom: 350px;
+      }
+      #romance{
+        border-color: Crimson;
+        background-color:rgba(237, 20, 61, 0.2);
+      }
+      #second{
+        width: 100%;
+        height: 100px;
+        color: white;
+        position: relative;
+        bottom: 385px;
+      }
+      #third{
+        width: 100%;
+        height: 100px;
+        color: white;
+        position: relative;
+        bottom: 435px;
+        right: 250px;
+      }
+      #fourth{
+        width: 100%;
+        height: 568px;
+        position: relative;
+        bottom: 120px;
+        right: 250px;
+      }
+      #rightside {
+        width:192px;
+        height:896px;
+        background-color: black;
+        line-height: 768px;
+        flex:3;
+      }
+      #footer{
+        width:1536px;
+        height:128px;
+        background-color: black;
+        line-height: 192px;/*글자나 이미지 위치 정렬*/
+        color:white;
+        float: left;
+        font-family: Georgia, 궁서;
+      }
+      h2{
+        background-color: rgb(204, 255, 255);
+        color: blue;
+        display: inline;
+        padding: 10px;
+        margin: 20px;
+        border: 2px solid;
+        font-family: 나눔고딕;
+      }
+      h3{
+        color: black;
+        font-family: 나눔고딕;
+        display: inline;
+        background-color: white;
+        padding: 10px;
+        border: 2px solid;
+      }
+      h5{
+        color: red;
+        display: inline;
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px;
+        font-family: 나눔고딕;
+      }
+      img{
+        border: 2px solid black;
+      }
+      #대전{
+        position: relative;
+        border-radius: 30%;
+        bottom: 785px;
+        left: 88px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #대전 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #대전 span:after {
+        content: '대전';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #대전:hover span {
+        padding-right: 25px;
+      }
+      #대전:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #예천{
+        position: relative;
+        border-radius: 30%;
+        bottom: 815px;
+        right: -168px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #예천 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #예천 span:after {
+        content: '예천';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #예천:hover span {
+        padding-right: 25px;
+      }
+      #예천:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #순천{
+        position: relative;
+        border-radius: 30%;
+        bottom: 610px;
+        right: -18px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #순천 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #순천 span:after {
+        content: '순천';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #순천:hover span {
+        padding-right: 25px;
+      }
+      #순천:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #사천{
+        position: relative;
+        border-radius: 30%;
+        bottom: 610px;
+        right: -58px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #사천 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #사천 span:after {
+        content: '사천';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #사천:hover span {
+        padding-right: 25px;
+      }
+      #사천:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #포항{
+        position: relative;
+        border-radius: 30%;
+        bottom: 740px;
+        right: -178px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #포항 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #포항 span:after {
+        content: '포항';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #포항:hover span {
+        padding-right: 25px;
+      }
+      #포항:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #원주{
+        position: relative;
+        border-radius: 30%;
+        bottom: 905px;
+        right: -16px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #원주 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #원주 span:after {
+        content: '원주';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #원주:hover span {
+        padding-right: 25px;
+      }
+      #원주:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #전주{
+        position: relative;
+        border-radius: 30%;
+        bottom: 720px;
+        right: 112px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #전주 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #전주 span:after {
+        content: '전주';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #전주:hover span {
+        padding-right: 25px;
+      }
+      #전주:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #서산{
+        position: relative;
+        border-radius: 30%;
+        bottom: 845px;
+        right: 192px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #서산 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #서산 span:after {
+        content: '서산';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #서산:hover span {
+        padding-right: 25px;
+      }
+      #서산:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #천안{
+        position: relative;
+        border-radius: 30%;
+        bottom: 845px;
+        right: 142px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #천안 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #천안 span:after {
+        content: '천안';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #천안:hover span {
+        padding-right: 25px;
+      }
+      #천안:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #남양주{
+        position: relative;
+        border-radius: 30%;
+        bottom: 950px;
+        right: 162px;
+        border: 1px solid red;
+        background-color: rgb(255, 189, 189);
+        font-family: 나눔고딕;
+        color: red;
+      }
+      #남양주 span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      #남양주 span:after {
+        content: '남양주';
+        position: absolute;
+        opacity: 0;
+        bottom: 0px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #남양주:hover span {
+        padding-right: 38px;
+      }
+      #남양주:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      h4{
+        background-color: white;
+        border-radius: 12px;
+        color: black;
+        display: inline;
+        padding: 30px;
+        margin: 20px;
+        border: 5px solid;
+        font-family: 나눔고딕;
+        position: relative;
+        bottom: 800px;
+        left: 100px;
+        font-size: 30px;
+      }
+      .button {
+        border: 2px solid black;
+        border-radius: 12px;
+        color: black;
+        background-color: white;
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+        width: 160px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        position: relative;
+        font-family: 나눔고딕;
+        bottom: 800px;
+        left: 100px;
+        font-weight: bold;
+      }
+      .button:hover {
+        background-color: black;
+        color: white;
+      }
+      #지역2 {
+        color: white;
+      }
+    </style>
+
+  </head>
+  <body>
+      <div id="wrap">
+        <div id="header">Chapter 4</div>
+        <div id="middle">
+          <div id="leftside"></div>
+            <div id="section">
+
+              <div id="first"><h2> 로맨스 부동산</h2></div>
+              <div id="second"><h3> 어디에 투자하시겠습니까? </h3></div>
+              <div id="third"><h5> 1억원 토지매물 목록 </h5></div>
+              <div id="fourth"><img src="지도수정2.jpg" width=40%></div>
+              <button type="button" id="대전" onclick="selectcity('대전')"><span>1</span></button>
+              <button type="button" id="예천" onclick="selectcity('예천')"><span>2</span></button>
+              <button type="button" id="순천" onclick="selectcity('순천')"><span>3</span></button>
+              <button type="button" id="사천" onclick="selectcity('사천')"><span>4</span></button>
+              <button type="button" id="포항" onclick="selectcity('포항')"><span>5</span></button>
+              <button type="button" id="원주" onclick="selectcity('원주')"><span>6</span></button>
+              <button type="button" id="전주" onclick="selectcity('전주')"><span>7</span></button>
+              <button type="button" id="서산" onclick="selectcity('서산')"><span>8</span></button>
+              <button type="button" id="천안" onclick="selectcity('천안')"><span>9</span></button>
+              <button type="button" id="남양주" onclick="selectcity('남양주')"><span>10</span></button>
+
+              <h4> 투자지역: <span id="지역"></span><span id="지역2"> 어디 </span></h4>
+
+              <script>
+                  var city = document.getElementById("지역");
+                  var city2 = document.getElementById("지역2");
+                  var city3=''
+                  function selectcity(land) {
+                  city.innerHTML = land;
+                  city3=land;
+                  city2.innerHTML = ' ';
+                  }
+              </script>
+              <button class="button" onclick=check();>투자 결정</button>
+              <script>
+              function check(){
+                var question=city3+"에 투자하시겠습니까?"
+                var answer=window.confirm(question)
+                if(answer) {
+                  if(city3=="사천"){
+                    location.href="chapter4-3-3-1.html";
+                  }
+                  else{
+                    location.href="chapter4-3-3-2.html";
+                  }
+                }
+              }
+              </script>
+          </div>
+          <div id="rightside"></div>
+        </div>
+        <div id="footer">Produced by 김기범, 박하늘, 송찬의, 정우석</div>
+      </div>
+  </body>
+</html>
