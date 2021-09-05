@@ -21,7 +21,8 @@
           <input id="SearchWindow" type="text" name="search" placeholder="검색" autocomplete="off" onKeypress="javascript:if(event.keyCode==13) {search_onclick_submit()}"/>
           <div class="RecordWindow">
             <div class="record">대장 토끼</div>
-            <div class="record">기생충 전등</div>
+            <div class="record">기생충 전등
+          </div>
             <div class="record">하순모주</div>
           </div>
         </div>
@@ -39,7 +40,21 @@
         <h2>Score : <span id="score">0</span></h2>
         <h2 id="h2bestScore" style="display: none">Your best score : <span id="bestScore">0</span></h2>
     </div>
-    <footer> Produced by  김기범, 박하늘, 송찬의, 정우석</footer>
+    <footer> Produced by  김기범, 박하늘, 송찬의, 정우석
+      <button type="button" id="imagepop" onclick="fnImgPop('모스부호.png')">힌트에요</button>
+      <script type="text/javascript">
+      function fnImgPop(url){
+        var img=new Image();
+        img.src=url;
+        var img_width=img.width;
+        var win_width=img.width+300;
+        var img_height=img.height;
+        var win=img.height+500;
+        var OpenWindow=window.open('','_blank', 'width='+img_width+', height='+img_height+', menubars=no, scrollbars=auto');
+        OpenWindow.document.write("<style>body{margin:0px;}</style><img src='"+url+"' width='"+win_width+"'>");
+      }
+    </script>
+    </footer>
 
     <script src = "script.js"></script>
   </body>

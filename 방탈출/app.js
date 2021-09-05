@@ -3,6 +3,7 @@ let score = 0;
 let toWin = 0;
 
 document.getElementById("play").addEventListener("click", function game() {
+	var eatlist="먹은 아이템: ";
 	const scoreDisplay = document.getElementById("score");
 	const width = 31; // 28*28 = 784 squares
 	const grid = document.querySelector(".grid")
@@ -130,6 +131,7 @@ document.getElementById("play").addEventListener("click", function game() {
 
 		pacDotEaten();
 		powerPelletEaten();
+		emptyEaten();
 		checkForGameOver();
 		checkForWin();
 	}
@@ -205,6 +207,7 @@ document.getElementById("play").addEventListener("click", function game() {
 
 		pacDotEaten();
 		powerPelletEaten();
+		emptyEaten();
 		checkForGameOver();
 		checkForWin();
 
@@ -222,6 +225,7 @@ document.getElementById("play").addEventListener("click", function game() {
 			score++;
 			toWin++;
 			squares[pacmanCurrentIndex].classList.remove("pac-dot");
+			eatlist=eatlist+".";
 		}
 		scoreDisplay.innerHTML = score;
 	}
@@ -234,6 +238,19 @@ document.getElementById("play").addEventListener("click", function game() {
 				//ghosts.forEach(ghost => ghost.isScared = true);
 				//setTimeout(unScareGhosts, 7000);
 				squares[pacmanCurrentIndex].classList.remove("power-pellet");
+				eatlist=eatlist+"-";
+			}
+			scoreDisplay.innerHTML = score;
+		}
+
+		function emptyEaten () {
+			if (squares[pacmanCurrentIndex].classList.contains("empty")) {
+				score += 10;
+				toWin += 10;
+				//ghosts.forEach(ghost => ghost.isScared = true);
+				//setTimeout(unScareGhosts, 7000);
+				squares[pacmanCurrentIndex].classList.remove("power-pellet");
+				eatlist=eatlist+" ";
 			}
 			scoreDisplay.innerHTML = score;
 		}
@@ -337,6 +354,21 @@ document.getElementById("play").addEventListener("click", function game() {
 			let youWon = document.createElement("div");
 			youWon.classList.add("won");
 			document.body.append(youWon);
+
+			let youWon2 = document.createElement("div");
+			youWon2.classList.add("won2");
+			var newContent=document.createTextNode(eatlist);
+			youWon2.appendChild(newContent)
+			document.body.append(youWon2);
+			list=document.getElementsByClassName("won2");
+			list.innerHTML= eatlist;
+			/*let youWin = document.createElement("div");
+			youWin.classList.add("win");
+			document.body.append(youWin);*/
+/*			let winlist = document.createElement("div");
+			winlist.classList.add("winlist");
+			document.body.append(winlist);*/
+			//winlist.innerHTML = eatlist;
 			restartButton.classList.add("restart");
 			document.body.append(restartButton);
 			document.getElementById("play").removeEventListener("click", game);
