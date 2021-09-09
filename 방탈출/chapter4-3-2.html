@@ -138,6 +138,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #대전 span{
         cursor: pointer;
@@ -169,6 +170,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #예천 span{
         cursor: pointer;
@@ -200,6 +202,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #순천 span{
         cursor: pointer;
@@ -231,6 +234,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #사천 span{
         cursor: pointer;
@@ -262,6 +266,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #포항 span{
         cursor: pointer;
@@ -293,6 +298,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #원주 span{
         cursor: pointer;
@@ -324,6 +330,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #전주 span{
         cursor: pointer;
@@ -355,6 +362,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #서산 span{
         cursor: pointer;
@@ -386,6 +394,7 @@
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #천안 span{
         cursor: pointer;
@@ -411,12 +420,13 @@
       #남양주{
         position: relative;
         border-radius: 30%;
-        bottom: 950px;
-        right: 162px;
+        bottom: 975px;
+        right: 182px;
         border: 1px solid red;
         background-color: rgb(255, 189, 189);
         font-family: 나눔고딕;
         color: red;
+        cursor: pointer;
       }
       #남양주 span{
         cursor: pointer;
@@ -478,6 +488,14 @@
       #지역2 {
         color: white;
       }
+      body {
+        -ms-user-select: none;
+  -moz-user-select:
+  -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select:none;
+      }
     </style>
 
   </head>
@@ -492,16 +510,16 @@
               <div id="second"><h3> 어디에 투자하시겠습니까? </h3></div>
               <div id="third"><h5> 1억원 토지매물 목록 </h5></div>
               <div id="fourth"><img src="지도수정2.jpg" width=40%></div>
-              <button type="button" id="대전" onclick="selectcity('대전')"><span>1</span></button>
-              <button type="button" id="예천" onclick="selectcity('예천')"><span>2</span></button>
-              <button type="button" id="순천" onclick="selectcity('순천')"><span>3</span></button>
-              <button type="button" id="사천" onclick="selectcity('사천')"><span>4</span></button>
-              <button type="button" id="포항" onclick="selectcity('포항')"><span>5</span></button>
-              <button type="button" id="원주" onclick="selectcity('원주')"><span>6</span></button>
-              <button type="button" id="전주" onclick="selectcity('전주')"><span>7</span></button>
-              <button type="button" id="서산" onclick="selectcity('서산')"><span>8</span></button>
-              <button type="button" id="천안" onclick="selectcity('천안')"><span>9</span></button>
-              <button type="button" id="남양주" onclick="selectcity('남양주')"><span>10</span></button>
+              <button type="button" id="대전" onclick="selectcity('대전')"> 1 </button>
+              <button type="button" id="예천" onclick="selectcity('예천')"> 2 </button>
+              <button type="button" id="순천" onclick="selectcity('순천')"> 3 </button>
+              <button type="button" id="사천" onclick="selectcity('사천')"> 4 </button>
+              <button type="button" id="포항" onclick="selectcity('포항')"> 5 </button>
+              <button type="button" id="원주" onclick="selectcity('원주')"> 6 </button>
+              <button type="button" id="전주" onclick="selectcity('전주')"> 7 </button>
+              <button type="button" id="서산" onclick="selectcity('서산')"> 8 </button>
+              <button type="button" id="천안" onclick="selectcity('천안')"> 9 </button>
+              <button type="button" id="남양주" onclick="selectcity('양주')"> 10 </button>
 
               <h4> 투자지역: <span id="지역"></span><span id="지역2"> 어디 </span></h4>
 
